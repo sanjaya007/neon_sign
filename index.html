@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sanjaya007/flex-library@master/dist/css/sanjaya.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body>
+    <div class="home-container content-container">
+      <div class="home-heading flex-css">
+        <p>Design your <span> Neon</span></p>
+      </div>
+      <div class="home-tab flex-css-row">
+        <div class="big-box">
+          <img src="./images/tab1.png" alt="tab" />
+          <div class="big-wrapper flex-css" data-toggle="text-neon">
+            <h1>TEXT</h1>
+          </div>
+        </div>
+        <div class="big-box">
+          <img src="./images/tab2.png" alt="tab" />
+          <div class="big-wrapper flex-css" data-toggle="logo-neon">
+            <h1>LOGO</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-container content-container textneon-container flex-top hidden">
+      <div class="primary-container" id="primaryContainer">
+        <div class="preview-container">
+          <div class="preview-wrapper flex-css">
+            <div class="top-bar">
+              <div class="tab-bar timeline-bar flex-css-row-start" id="timelineBar">
+                <a href="#" class="tab-link flex-css image-heading-timeline">
+                  <span class="flex-css active"> <img src="./images/tick.png" alt="tick" /> 1</span>
+                  <div class="timeline-line line-1"></div>
+                </a>
+                <a href="#" class="tab-link flex-css color-heading-timeline">
+                  <span class="flex-css"> <img src="./images/tick.png" alt="tick" /> 2</span>
+                  <div class="timeline-line line-2"></div>
+                </a>
+                <a href="#" class="tab-link flex-css font-heading-timeline">
+                  <span class="flex-css"> <img src="./images/tick.png" alt="tick" /> 3</span>
+                  <div class="timeline-line line-3"></div>
+                </a>
+                <a href="#" class="tab-link flex-css size-heading-timeline">
+                  <span class="flex-css"> <img src="./images/tick.png" alt="tick" /> 4</span>
+                  <div class="timeline-line line-4"></div>
+                </a>
+                <a href="#" class="tab-link flex-css style-heading-timeline">
+                  <span class="flex-css"> <img src="./images/tick.png" alt="tick" /> 5</span>
+                  <div class="timeline-line line-5"></div>
+                </a>
+                <a href="#" class="tab-link flex-css backing-color-heading-timeline">
+                  <span class="flex-css"> <img src="./images/tick.png" alt="tick" /> 6</span>
+                  <div class="timeline-line line-6"></div>
+                </a>
+                <a href="#" class="tab-link flex-css extra-heading-timeline">
+                  <span class="flex-css"> <img src="./images/tick.png" alt="tick" /> 7</span>
+                  <div class="timeline-line line-7"></div>
+                </a>
+                <a href="#" class="tab-link flex-css finish-heading-timeline">
+                  <span class="flex-css"> <img src="./images/tick.png" alt="tick" /> 8</span>
+                </a>
+              </div>
+              <div class="tab-bar flex-css-row-start">
+                <a href="#" class="tab-link image-heading active" id="imageLink" data-key="image" data-next="colorLink" data-prev="" data-num="1"></a>
+                <a href="#" class="tab-link color-heading" id="colorLink" data-key="color" data-next="fontLink" data-prev="imageLink" data-num="2"></a>
+                <a href="#" class="tab-link disabled-link font-heading" id="fontLink" data-key="font" data-next="sizeLink" data-prev="colorLink" data-num="3"></a>
+                <a href="#" class="tab-link disabled-link size-heading" id="sizeLink" data-key="size" data-next="styleLink" data-prev="fontLink" data-num="4"></a>
+                <a href="#" class="tab-link disabled-link style-heading" id="styleLink" data-key="style" data-next="backingColorLink" data-prev="sizeLink" data-num="5"></a>
+                <a
+                  href="#"
+                  class="tab-link disabled-link backing-color-heading"
+                  id="backingColorLink"
+                  data-key="backing_color"
+                  data-next="extraLink"
+                  data-prev="styleLink"
+                  data-num="6"
+                ></a>
+                <a href="#" class="tab-link disabled-link extra-heading" id="extraLink" data-key="extra" data-next="finishLink" data-prev="backingColorLink" data-num="7"></a>
+                <a href="#" class="tab-link disabled-link finish-heading" id="finishLink" data-next="" data-prev="extraLink" data-num="8">Finish</a>
+              </div>
+              <div class="content-bar">
+                <div class="inner-bar images-bar flex-css-row-start" id="imageList">
+                  <div class="custom-images flex-css-row-start" id="customImages">
+                    <div class="upload-card">
+                      <div class="text-box">
+                        <h1>Upload</h1>
+                        <p>your own</p>
+                        <p>background</p>
+                        <input type="file" id="uploadStockImageBtn" multiple />
+                      </div>
+                    </div>
+                    <!-- <div class="image-container">
+                  <img src="./images/img1.png" alt="background" />
+                </div> -->
+                  </div>
+                  <div class="sample-images flex-css-row-start" id="stockImages">
+                    <!-- <div class="image-container stock-image-card active">
+                  <img src="./images/bg1.jpeg" alt="background" />
+                </div> -->
+                  </div>
+                </div>
+                <div class="inner-bar color-bar hidden flex-css-row-start" id="colorList">
+                  <!-- <div class="list-box color-card active flex-css-column">
+                  <span style="background-color: #e67e22"></span>
+                  <p>Orange</p>
+                </div> -->
+                </div>
+                <div class="inner-bar font-bar hidden flex-css-row-start" id="fontList">
+                  <!-- <div class="list-box font-card active flex-css">
+                  <p>simple</p>
+                </div> -->
+                </div>
+                <div class="inner-bar size-bar hidden flex-css-row-start" id="sizeList">
+                  <div class="box size-card active flex-css-row-sb" id="smallCard" data-value="Small,40cm - 13cm, 15.75in - 5.12in">
+                    <h2>Small</h2>
+                    <p><span class="widthCM"></span> &times; <span class="heightCM"></span></p>
+                    <p><span class="widthIN"></span> &times; <span class="heightIN"></span></p>
+                  </div>
+                  <div class="box size-card flex-css-row-sb" id="mediumCard" data-value="Medium,40cm - 13cm, 15.75in - 5.12in">
+                    <h2>Medium</h2>
+                    <p>40cm - 13cm</p>
+                    <p>15.75in - 5.12in</p>
+                  </div>
+                  <div class="box size-card flex-css-row-sb" id="largeCard" data-value="Large,40cm - 13cm, 15.75in - 5.12in">
+                    <h2>Large</h2>
+                    <p>40cm - 13cm</p>
+                    <p>15.75in - 5.12in</p>
+                  </div>
+                  <div class="box size-card flex-css-row-sb" id="customCard" data-value="Custom,40cm - 13cm, 15.75in - 5.12in">
+                    <h2>Add Custom</h2>
+                    <p>+</p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="inner-bar style-bar hidden flex-css-row-start" id="styleList">
+                  <!-- <div class="box style-card flex-css-column active" data-value="Cut to shape">
+                    <img src="./images/cut1.png" alt="style" />
+                    <p>Cut to shape</p>
+                  </div>
+                  <div class="box style-card flex-css-column" data-value="Cut to letter">
+                    <img src="./images/cut2.png" alt="style" />
+                    <p>Cut to letter</p>
+                  </div>
+                  <div class="box style-card flex-css-column" data-value="Rectangle">
+                    <img src="./images/cut3.png" alt="style" />
+                    <p>Rectangle</p>
+                  </div> -->
+                </div>
+                <div class="inner-bar backing-color-bar hidden flex-css-row-start" id="backingColorList">
+                  <!-- <div class="box active backing-color-card flex-css-column" data-value="0">
+                    <img src="./images/backcolor1.png" alt="back" />
+                    <h6>Clear acrylic</h6>
+                  </div>
+                  <div class="box backing-color-card flex-css-column" data-value="1">
+                    <img src="./images/backcolor2.png" alt="back" />
+                    <h6>Black acrylic <span>+$45</span></h6>
+                  </div>
+                  <div class="box backing-color-card flex-css-column" data-value="2">
+                    <img src="./images/backcolor3.png" alt="back" />
+                    <h6>Silver Mirror <span>+$90</span></h6>
+                  </div>
+                  <div class="box backing-color-card flex-css-column" data-value="3">
+                    <img src="./images/backcolor4.png" alt="back" />
+                    <h6>Gold Mirror <span>+$110</span></h6>
+                  </div>
+                  <div class="box backing-color-card flex-css-column" data-value="4">
+                    <img src="./images/backcolor5.png" alt="back" />
+                    <h6>Printing custom colors <span>+$120</span></h6>
+                  </div> -->
+                </div>
+                <div class="inner-bar extra-bar hidden" id="extraList">
+                  <div class="extra-cat flex-top-row-sb">
+                    <div class="box waterproof-box">
+                      <h1>Waterproof</h1>
+                      <p>A special protective glue will be applied (+<span class="waterproof-rate"></span>% in the price)</p>
+                      <div class="waterproof-btn flex-css-column">
+                        <a href="#" class="waterproof-link active" data-value="Indoor" data-key="waterproof"> For indoor use only </a>
+                        <a href="#" class="waterproof-link" data-value="Outdoor" data-key="waterproof">
+                          For outdoor use (Waterproof) <br />
+                          <span> A special protective glue will be applied (+<span class="waterproof-rate"></span>% in the price)</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="box remote-box">
+                      <h1>Remote</h1>
+                      <p>Add a Remote with your include dinner (+$<span class="remote-rate"></span>)</p>
+                      <div class="choose-btn flex-css-row-start">
+                        <a href="#" class="choose-link choose-remote-link active" data-value="Yes" data-key="remote">Yes</a>
+                        <a href="#" class="choose-link choose-remote-link" data-value="No" data-key="remote">No</a>
+                      </div>
+                    </div>
+                    <div class="box mount-box">
+                      <h1>Mounting(3M)</h1>
+                      <p>Add some 3M Command Stripes to your free screw kit (optional) +$<span class="mounting-rate"></span> No tools necessary, Indoor use</p>
+                      <div class="choose-btn flex-css-row-start">
+                        <a href="#" class="choose-link choose-mount-link active" data-value="Yes" data-key="mounting">Yes</a>
+                        <a href="#" class="choose-link choose-mount-link" data-value="No" data-key="mounting">No</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="done-btn">
+                    <a href="#">Done</a>
+                  </div>
+                </div>
+                <div class="inner-bar finish-bar hidden" id="finishList"></div>
+              </div>
+            </div>
+            <div class="mobile-bottom flex-css-end">
+              <div class="price-box flex-css">
+                <h1>Price</h1>
+                <p class="preview-price">$00.00</p>
+              </div>
+              <div class="mobile-next-btn next-btn flex-css">
+                <a href="#" class="next-btn" id="mobileNextBtn">Next</a>
+              </div>
+              <div class="go-back-btn hidden flex-css">
+                <a href="#" id="goBack">Go Back</a>
+              </div>
+              <div class="close-btn flex-css">
+                <a href="#" id="closeBtn" data-toggle="home-container">Close</a>
+              </div>
+            </div>
+
+            <div class="preview-text">
+              <div class="placeholder-text hidden">
+                <h1>Type your Text here</h1>
+              </div>
+              <div class="the-text text-input text-input-one" contenteditable="true"></div>
+              <div class="preview-scale scale-height">
+                <div class="scale-line">
+                  <div class="line-margin margin-one"></div>
+                  <div class="line-margin margin-two"></div>
+                  <div class="scale-value flex-css-column">
+                    <p class="heightCM"></p>
+                    <p class="heightIN"></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="preview-scale scale-width">
+                <div class="scale-line">
+                  <div class="line-margin margin-one"></div>
+                  <div class="line-margin margin-two"></div>
+                  <div class="scale-value flex-css-column">
+                    <p class="widthCM"></p>
+                    <p class="widthIN"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="secondary-container">
+        <div class="sidebar-container">
+          <div class="design-box">
+            <div class="tab-box flex-css-row-sb">
+              <a href="#" class="tab active" data-toggle="text-neon">Text</a>
+              <a href="#" class="tab" data-toggle="logo-neon">Logo</a>
+            </div>
+            <div class="write-text">
+              <label class="write-heading"> </label> <br />
+              <div class="text-input text-input-two" contenteditable="true">Hello</div>
+            </div>
+            <div class="final-box hidden">
+              <div class="result-box text-result hidden">
+                <h1>Text</h1>
+                <p class="final-text"></p>
+              </div>
+              <div class="result-box color-result hidden">
+                <h1>COLOR</h1>
+                <p class="final-text"></p>
+              </div>
+              <div class="result-box font-result hidden">
+                <h1>Font</h1>
+                <p class="final-text"></p>
+              </div>
+              <div class="result-box size-result hidden">
+                <h1>SIZE</h1>
+                <p class="final-text"></p>
+              </div>
+              <div class="result-box style-result hidden">
+                <h1>BACKING STYLE</h1>
+                <p class="final-text"></p>
+              </div>
+              <div class="result-box backing-color-result hidden">
+                <h1>BACKING COLOR</h1>
+                <p class="final-text"></p>
+              </div>
+            </div>
+            <div class="next-btn flex-css" id="nextBtn">
+              <a href="#" class="next-btn"> Next </a>
+            </div>
+          </div>
+          <div class="order-box hidden">
+            <div class="heading">
+              <h1>Order Summary</h1>
+            </div>
+            <div class="sub-heading">
+              <h6>Your neon sign details</h6>
+            </div>
+            <div class="order-details">
+              <div class="box">
+                <div class="list">
+                  <h1>Your Text</h1>
+                  <p class="order-text"></p>
+                </div>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <h1>Size</h1>
+                  <p class="order-size"></p>
+                </div>
+              </div>
+              <div class="box row-box flex-css-row-start">
+                <div class="list">
+                  <h1>Font</h1>
+                  <p class="order-font"></p>
+                </div>
+                <div class="list">
+                  <h1>Color</h1>
+                  <p class="order-color"></p>
+                </div>
+              </div>
+              <div class="box row-box flex-css-row-start">
+                <div class="list">
+                  <h1>Style</h1>
+                  <p class="order-style"></p>
+                </div>
+                <div class="list">
+                  <h1>Backing Color</h1>
+                  <p class="order-backing-color"></p>
+                </div>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <h1>Extra</h1>
+                  <p class="order-waterproof"></p>
+                  <p class="order-remote"></p>
+                  <p class="order-mounting"></p>
+                </div>
+              </div>
+              <div class="box">
+                <div class="list row-list flex-css-row-start">
+                  <h1>Price</h1>
+                  <p class="order-price price-text"></p>
+                </div>
+              </div>
+            </div>
+            <div class="proceed-btn flex-css">
+              <a href="#">
+                <span><i class="fas fa-shopping-bag"></i></span> Proceed to payment
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-slider flex-bottom" style="display: none">
+        <div class="slider-box">
+          <h1>Choose your size</h1>
+          <div class="slider-container">
+            <div id="slider" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+              <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%"></span>
+            </div>
+            <div class="cal-details">
+              <p>40cm x 13cm</p>
+              <p>15.75i x 5.12i</p>
+            </div>
+          </div>
+          <div class="custom-btn-container flex-css-row-sb">
+            <a href="#" class="custom-size-btn" id="sizeCancel">Cancel</a>
+            <a href="#" class="custom-size-btn" id="sizeConfirm">Confirm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-container content-container logoneon-container flex-top hidden">
+      <div class="primary-container">
+        <div class="preview-container">
+          <div class="top-bar">
+            <div class="tab-bar flex-css-row-start">
+              <a href="#" class="logo-tab-link active" id="uploadLink" data-next="descriptionLink" data-prev="" data-num="1">Upload Image</a>
+              <a href="#" class="logo-tab-link" id="descriptionLink" data-next="finishLink" data-prev="uploadLink" data-num="2">description</a>
+              <a href="#" class="logo-tab-link" id="finishLink" data-next="" data-prev="descriptionLink" data-num="3">Finish</a>
+            </div>
+            <div class="upload-container">
+              <h1>Upload Logo/Image:</h1>
+              <div class="box flex-css-column">
+                <div class="icon-container">
+                  <img src="./images/files.png" alt="files" />
+                </div>
+                <div class="upload-btn flex-css">
+                  <a href="#"> Upload Image </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="secondary-container">
+        <div class="logo-sidebar-container">
+          <div class="design-box">
+            <div class="tab-box flex-css-row-sb">
+              <a href="#" class="tab" data-toggle="text-neon">Text</a>
+              <a href="#" class="tab active" data-toggle="logo-neon">Logo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/handler.js"></script>
+    <script src="./js/calculation.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

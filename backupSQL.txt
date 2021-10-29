@@ -1,0 +1,29 @@
+-- Dumping data for table `colors`
+INSERT INTO `colors` (`id`, `color_name`, `color_code`, `created_at`, `updated_at`) VALUES
+(1, 'Orange', '#e67e22', '2021-09-28 12:40:10', '2021-09-28 12:40:10'),
+(2, 'Blue', '#3498db', '2021-09-28 13:05:43', '2021-09-28 13:05:43'),
+(3, 'Green', '#23cc71', '2021-09-28 13:07:18', '2021-09-28 13:07:18'),
+(4, 'Yellow', '#f1c40f', '2021-09-28 13:07:55', '2021-09-28 13:07:55'),
+(5, 'Red', '#e74c3c', '2021-09-28 13:08:36', '2021-09-28 13:08:36'),
+(6, 'Purple', '#9b59bc', '2021-09-28 13:09:10', '2021-09-28 13:09:10');
+
+-- Dumping data for table `fonts`
+INSERT INTO `fonts` (`id`, `font_name`, `tool_name`, `font_file`, `created_at`, `updated_at`) VALUES
+(1, 'Gilroylight', 'Simple', '/fonts/1632849565401_GilroyLight.woff', '2021-09-28 13:19:25', '2021-09-28 13:19:25'),
+(2, 'Harman Script', 'Classic', '/fonts/1632849623304_font.woff', '2021-09-28 13:20:23', '2021-09-28 13:20:23'),
+(3, 'Just Lovely Regular', 'Lovely', '/fonts/1632849705498_JustLovely.woff', '2021-09-28 13:21:46', '2021-09-28 13:21:46'),
+(7, 'Campesina', 'Glam', '/fonts/1632850147442_CampesinaRegular.woff', '2021-09-28 13:29:07', '2021-09-28 13:29:07'),
+(8, 'HanleyProMonoline', 'Rustic', '/fonts/1632850232360_HanleyProMonoline.woff', '2021-09-28 13:30:32', '2021-09-28 13:30:32');
+
+-- Dumping data for table `stock_images`
+INSERT INTO `stock_images` (`id`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'https://i.imgur.com/7vQqHYs.png', '2021-10-05 19:20:10', '2021-10-05 19:20:10'),
+(3, 'https://source.unsplash.com/1600x900/?dark', '2021-10-05 19:20:37', '2021-10-05 19:20:37'),
+(4, 'https://source.unsplash.com/1600x900/?gloomy', '2021-10-05 19:20:56', '2021-10-05 19:20:56');
+
+-- Dumping data for table `backing_colors`
+INSERT INTO `backing_colors` (`id`, `name`, `image`, `price`, `created_at`, `updated_at`) VALUES
+(1, 'Black acrylic', '/1633702297469-Rectangle 210.png', 50, '2021-10-08 10:11:45', '2021-10-08 10:11:45'),
+(2, 'Clear acrylic', '/1633702463764-Rectangle 217.png', 50, '2021-10-08 10:14:31', '2021-10-08 10:14:31'),
+(3, 'Silver Mirror', '/1633702504512-Rectangle 218.png', 100, '2021-10-08 10:15:10', '2021-10-08 10:15:10'),
+(4, 'Gold Mirror', '/1633702520999-Rectangle 219.png', 100, '2021-10-08 10:15:24', '2021-10-08 10:15:24');
